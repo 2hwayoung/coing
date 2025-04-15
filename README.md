@@ -1,6 +1,6 @@
-# NBE4-5-3-Team09
+# Coing
 
-프로그래머스 백엔드 데브코스 4기 5회차 9팀 시고르백구의 2차 팀 프로젝트입니다.
+2025 프로그래머스 백엔드 데브코스 4기 5회차 9팀 시고르백구의 [프로젝트](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09)입니다.
 
 ## 👥 Team Introduction
 
