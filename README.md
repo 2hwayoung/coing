@@ -1,15 +1,15 @@
-# Coing
+# 코잉(Coing): 실시간 코인 데이터 분석 및 북마크 대시보드 서비스
 
 2025 프로그래머스 백엔드 데브코스 4기 5회차 9팀 시고르백구의 [프로젝트](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09)입니다.
 
 ## 👥 Team Introduction
 
-| Name   | GitHub                                    | Role                                                                                         |
-| ------ | ----------------------------------------- | -------------------------------------------------------------------------------------------- |
-| 이화영 | [2hwayoung](https://github.com/2hwayoung) | 팀 리딩, 프로젝트 관리, Upbit WebSocket 연동, 호가 정보 조회, 환경변수 관리, Gihub Action CI |
-| 김하연 | [xaxeon](https://github.com/xaxeon)       | 글로벌 예외 처리, 마켓 목록 조회 및 코인 대시보드, 북마크 추가/삭제, 소셜 로그인             |
-| 이승민 | [min429](https://github.com/min429)       | 웹소켓 클라이언트(프론트), 현재가 조회, 푸시 알림, Swagger 커스텀, Gihub Action CD           |
-| 장무영 | [wkdan](https://github.com/wkdan)         | 사용자 인증, 캔들 차트 조회, 채팅 기능, 관련 뉴스 기능, 관리자 권한 및 Security 설정         |
+| Name   | GitHub                                    | Role                                                                                          |
+| ------ | ----------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 이화영 | [2hwayoung](https://github.com/2hwayoung) | 팀 리딩, 프로젝트 관리, Upbit WebSocket 연동, 호가 정보 조회, 환경변수 관리, GitHub Action CI |
+| 김하연 | [xaxeon](https://github.com/xaxeon)       | 글로벌 예외 처리, 마켓 목록 조회 및 코인 대시보드, 북마크 추가/삭제, 소셜 로그인              |
+| 이승민 | [min429](https://github.com/min429)       | 웹소켓 클라이언트(프론트), 현재가 조회, 푸시 알림, Swagger 커스텀, GitHub Action CD           |
+| 장무영 | [wkdan](https://github.com/wkdan)         | 사용자 인증, 캔들 차트 조회, 채팅 기능, 관련 뉴스 기능, 관리자 권한 및 Security 설정          |
 
 ## 📊 Project Overview
 
@@ -19,7 +19,7 @@ _💡 실시간 코인 데이터 분석 및 북마크 대시보드 서비스_
 
 ### 운영 사이트: https://coing-ashen.vercel.app
 
-이 프로젝트의 목표는 실시간 코인 데이터를 기반으로, 개인화된 투자 인사이트를 제공하는 웹 서비스 **코잉(Coing)**을 구축하는 것입니다.
+이 프로젝트의 목표는 실시간 코인 데이터를 기반으로, 개인화된 투자 인사이트를 제공하는 웹 서비스 코잉(Coing)을 구축하는 것입니다.
 업비트 OpenAPI 및 WebSocket을 활용해 다양한 암호화폐 관련 데이터를 실시간으로 수집하고,
 사용자가 관심 있는 코인을 북마크하여 개인화된 대시보드를 구성할 수 있도록 하여 투자자들의 편의성과 효율적인 의사결정을 돕는 것이 목적입니다.
 
@@ -30,21 +30,7 @@ _💡 실시간 코인 데이터 분석 및 북마크 대시보드 서비스_
 
 ---
 
-### 🛠 Kotlin Migration (2차 MVP 핵심)
-
-이번 2차 MVP에서는 기존 Java 기반 백엔드 코드를 전면적으로 Kotlin으로 마이그레이션하여 유지보수성과 생산성을 향상시켰습니다.
-
-- Kotlin DSL 기반 Gradle 빌드 환경 구성
-
-- data class, sealed class, extension, coroutines 등 Kotlin 특화 문법 도입
-
-- Mockito 대신 mockito-kotlin을 활용한 Kotlin 친화 테스트 환경 구축
-
-- WebSocket/REST API 흐름, 서비스/도메인 계층을 Kotlin스럽게 리팩토링
-
-> ✅ 타입 안정성과 간결함을 바탕으로, 빠른 개발과 명확한 도메인 표현이 가능해졌습니다.
-
-## 최소 요구사항 (MVP)
+## 최소 요구사항 (1차 MVP)
 
 프로젝트의 기본 기능은 다음과 같습니다:
 
@@ -61,9 +47,16 @@ _💡 실시간 코인 데이터 분석 및 북마크 대시보드 서비스_
    - WebSocket 기반 시세/체결/호가 실시간 업데이트
    - REST API 기반 캔들 데이터 제공(최소 1초 간격 Polling)
 
-## 2차 MVP (추가 기능)
+## 추가 기능 및 Java -> Kotlin 전환 (2차 MVP)
 
-MVP 외에 추가적으로 구현된 기능들은 다음과 같습니다:
+2차 MVP에서는 기존 Java 기반 백엔드 코드를 전면적으로 Kotlin으로 마이그레이션하여 유지보수성과 생산성을 향상시켰습니다.
+
+- Kotlin DSL 기반 Gradle 빌드 환경 구성
+- data class, sealed class, extension, coroutines 등 Kotlin 특화 문법 도입
+- Mockito 대신 mockito-kotlin을 활용한 Kotlin 친화 테스트 환경 구축
+- WebSocket/REST API 흐름, 서비스/도메인 계층을 Kotlin스럽게 리팩토링
+
+추가적으로 구현된 기능들은 다음과 같습니다:
 
 - **인증/관리 기능**
   - 소셜 로그인 (카카오 연동)
@@ -74,23 +67,16 @@ MVP 외에 추가적으로 구현된 기능들은 다음과 같습니다:
 - **커뮤니티 기능**
   - WebSocket 기반 종목 단위 실시간 채팅 기능
 
-#### 관련 문서
+---
 
-> [📝 코잉(Coing) 기획서](<https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/%EC%BD%94%EC%9E%89(Coing)-%EA%B8%B0%ED%9A%8D%EC%84%9C>)
+#### 📎 관련 문서
 
-> (이전) [📘 코잉(Coing) 1차 MVP 기획서](<https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/%EC%BD%94%EC%9E%89(Coing)-1%EC%B0%A8-MVP-%EA%B8%B0%ED%9A%8D%EC%84%9C>)
-
-> (현재) [⭐️ 코잉(Coing) 2차 MVP 기획서](<https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/%EC%BD%94%EC%9E%89(Coing)-1%EC%B0%A8-MVP-%EA%B8%B0%ED%9A%8D%EC%84%9C>)
-
-> [타겟 유저 시나리오](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/Target-User-&-User-Scenario)
-
-> [유저 플로우](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/User-Flow)
-
-> [와이어 프레임](docs/wireframes/) ([Creatie Link](https://creatie.ai/goto/IDpBmt9v?page_id=M&file=153513435570624))
+- [코잉(Coing) 기획서](<https://github.com/2hwayoung/coing/wiki/01-%EC%BD%94%EC%9E%89(Coing)-%EA%B8%B0%ED%9A%8D%EC%84%9C>)
+- [1차 MVP 기획서](<https://github.com/2hwayoung/coing/wiki/02-1%EC%B0%A8-MVP-%EA%B8%B0%ED%9A%8D%EC%84%9C(Java)>)
+- [2차 MVP 기획서](<https://github.com/2hwayoung/coing/wiki/03-2%EC%B0%A8-MVP-%EA%B8%B0%ED%9A%8D%EC%84%9C(Kotlin)>)
+- [와이어 프레임](docs/wireframes/) ([Creatie Link](https://creatie.ai/goto/IDpBmt9v?page_id=M&file=153513435570624))
 
 ## 🛠️ Technology Stack
-
-> 자세한 내용은 [기술 스택 문서](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)에서 확인 가능합니다.
 
 #### 🎨 Frontend
 
@@ -136,7 +122,7 @@ MVP 외에 추가적으로 구현된 기능들은 다음과 같습니다:
 
 ### Deployment Structure
 
-서비스는 **프론트엔드(Next.js)**와 **백엔드(Spring Boot with Kotlin)**로 구성되며,
+서비스는 프론트엔드(Next.js)와 백엔드(Spring Boot with Kotlin)로 구성되며,
 각각 Vercel과 AWS EC2 + Docker 기반으로 배포됩니다.
 
 - Frontend: Vercel을 통해 자동 배포
@@ -166,14 +152,14 @@ MVP 외에 추가적으로 구현된 기능들은 다음과 같습니다:
 - 테스트 → Docker 이미지 빌드 → ECR에 Push → EC2에서 Pull 후 컨테이너 실행
 
 > 🔗 자세한 자동화 및 배포 프로세스는 아래 GitHub Wiki에서 확인할 수 있습니다
-> 👉 [배포 및 자동화 문서 바로가기](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%9E%90%EB%8F%99%ED%99%94)
+> 👉 [배포 및 자동화 문서 바로가기](https://github.com/2hwayoung/coing/wiki/12-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%9E%90%EB%8F%99%ED%99%94)
 
 ## 🛠️ 개발 환경 설정 (Development Setup)
 
 **1️⃣ Clone the Repository**
 
 ```bash
-git clone https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09.git
+git clone https://github.com/2hwayoung/coing.git
 ```
 
 **2️⃣ Environment Variables (.env) Setup**
@@ -235,60 +221,14 @@ npm run codegen:watch # Watch for API changes and regenerate types automatically
 
 - Access: http://localhost:3000
 
-## Project Structure
+## 📄 Related Docs
 
-```coing/
-├── backend/
-│   └── src/main/kotlin/com/coing/
-│       ├── domain/                       # 도메인 계층 (핵심 비즈니스 로직)
-│       │   ├── bookmark/                 # 북마크 등록/조회/삭제
-│       │   ├── chat/                     # 커뮤니티 채팅 기능
-│       │   ├── coin/                     # 코인 관련 도메인 통합
-│       │   │   ├── candle/               # 캔들 차트 데이터 (분봉, 일봉 등)
-│       │   │   ├── common/               # 공통 인터페이스/포트/헬퍼
-│       │   │   ├── market/               # 마켓 리스트, 마켓 정보 캐싱
-│       │   │   ├── orderbook/            # 호가창 실시간 처리 및 전송
-│       │   │   ├── ticker/               # 현재가 데이터 및 가격 변동률
-│       │   │   └── trade/                # 체결 내역 관리
-│       │   ├── news/                     # 코인 관련 뉴스 연동 (Naver API)
-│       │   ├── notification/             # 실시간 알림 기능 (이벤트 기반)
-│       │   └── user/                     # 회원 도메인 (인증, 권한 등)
-│
-│       ├── infra/                        # 인프라 계층 (외부 API, 메시징, WebSocket)
-│       ├── global/                       # 전역 설정 (WebSocketConfig, Security 등)
-│       └── Application.kt                # 스프링 부트 앱 실행 진입점
-│
-├── frontend/
-│   ├── pages/                            # Next.js 페이지 (메인, 상세, 대시보드 등)
-│   ├── components/                       # 공통 UI 컴포넌트
-│   ├── schemas/                          # OpenAPI 기반 타입 정의 (자동 생성)
-│   └── public/                           # 정적 파일
-│
-├── docker-compose.yml                   # MySQL 개발용 컨테이너 정의
-├── .github/workflows/                   # GitHub Actions CI/CD 설정
-├── .env.example                         # 환경 변수 예시
-└── README.md                            # 프로젝트 문서
+자세한 시스템 아키텍처, API 명세서, ERD 및 프로젝트 구조 등은 [위키](https://github.com/2hwayoung/coing/wiki)를 참고해주시기 바랍니다.
 
-```
+- [📃 API∙Websocket 명세서](https://github.com/2hwayoung/coing/wiki/08-API%E2%88%99Websocket-%EB%AA%85%EC%84%B8)
+- [📘 ERD 문서](https://github.com/2hwayoung/coing/wiki/07-ERD)
+- [🛠️기술 스택 문서](https://github.com/2hwayoung/coing/wiki/06-%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
+- [🛠️ TroubleShootings](https://github.com/2hwayoung/coing/wiki/15-TroubleShootings)
+- [📑 ADR](<https://github.com/2hwayoung/coing/wiki/09-%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95%EB%AC%B8%EC%84%9C(ADR)>)
 
-## 📄 API Docs & Data Schema
-
-**📘 API∙Websocket 명세**
-
-- [📃 API∙Websocket 명세](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/API%E2%88%99Websocket-%EB%AA%85%EC%84%B8)
-- Swagger UI:
-  http://localhost:8080/swagger-ui/index.html
-
-- OpenAPI 스키마 기반으로 프론트엔드에서 자동 타입 생성됨 (npm run codegen)
-
-**📊 ERD (Entity Relationship Diagram)**
-
-전체 테이블 구조 및 관계는 다음 링크에서 확인 가능합니다:
-
-🔗 [코잉 ERD 문서 보기](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team09/wiki/ERD)
-
-## ❓ Etc
-
-- [🛠️ TroubleShootings](https://github.com/prgrms-be-devcourse/NBE4-5-2-Team09/wiki/TroubleShootings)
-- [📑 Project Convention](https://github.com/prgrms-be-devcourse/NBE4-5-2-Team09/wiki/Convention)
-- [📝 Git Convention](https://github.com/prgrms-be-devcourse/NBE4-5-2-Team09/wiki/Git-Hub-%ED%98%91%EC%97%85-%EA%B7%9C%EC%B9%99)
+---
